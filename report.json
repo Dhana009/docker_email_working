@@ -1,0 +1,84 @@
+{
+    "report": {
+        "environment": {
+            "Python": "3.11.4",
+            "Platform": "Windows-10-10.0.19045-SP0"
+        },
+        "tests": [
+            {
+                "name": "test_login.py::TestGoogle::test_login_case1",
+                "duration": 20.780773600039538,
+                "run_index": 0,
+                "setup": {
+                    "name": "setup",
+                    "duration": 2.4535357000131626,
+                    "outcome": "passed"
+                },
+                "call": {
+                    "name": "call",
+                    "duration": 15.87320770000224,
+                    "outcome": "passed",
+                    "stdout": "Successfully logged in\n"
+                },
+                "teardown": {
+                    "name": "teardown",
+                    "duration": 0.0004945000109728426,
+                    "outcome": "passed"
+                },
+                "outcome": "passed"
+            },
+            {
+                "name": "test_login.py::TestGoogle::test_login_case2",
+                "duration": 2.0333179000299424,
+                "run_index": 1,
+                "setup": {
+                    "name": "setup",
+                    "duration": 0.00044850000995211303,
+                    "outcome": "passed"
+                },
+                "call": {
+                    "name": "call",
+                    "duration": 2.031546000012895,
+                    "outcome": "passed",
+                    "stdout": "Successfully logged in\n"
+                },
+                "teardown": {
+                    "name": "teardown",
+                    "duration": 0.0008748999971430749,
+                    "outcome": "passed"
+                },
+                "outcome": "passed"
+            },
+            {
+                "name": "test_login.py::TestGoogle::test_login_case3",
+                "duration": 4.101099100022111,
+                "run_index": 2,
+                "setup": {
+                    "name": "setup",
+                    "duration": 0.0007555000192951411,
+                    "outcome": "passed"
+                },
+                "call": {
+                    "name": "call",
+                    "duration": 2.001713900011964,
+                    "outcome": "failed",
+                    "longrepr": "self = <test_login.TestGoogle object at 0x0000024077C8DAD0>, browser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"043d71b2797a731b21ecdba5a11c9626\")>\n\n    @pytest.mark.usefixtures(\"browser\")\n    def test_login_case3(self, browser):\n        browser.get(base_url)\n        wait = WebDriverWait(browser, 10)\n    \n        email_element = wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, \".w-full:nth-child(4)\")))\n        email_element.click()\n    \n        send_email_element = wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, \".w-full:nth-child(4)\")))\n        send_email_element.send_keys(email)\n    \n        password_element = wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, \".border:nth-child(1)\")))\n        password_element.click()\n    \n        send_password_element = wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, \".border:nth-child(1)\")))\n        send_password_element.send_keys(password)\n    \n        show_password = wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, \".absolute > svg\")))\n        show_password.click()\n    \n        login_button = wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, \".btn-primary\")))\n        login_button.click()\n    \n        try:\n            # Wait for the \"Post new job\" element\n            WebDriverWait(browser, 10).until(expected_conditions.presence_of_element_located((By.XPATH, \"//span[text()='Post new job']\")))\n            print('Successfully logged in')\n    \n        except TimeoutException:\n            assert False, \"Test failed due to incorrect username or password\"\n    \n        # Check if \"Post new job\" is present after login\n>       assert \"Post new qjob\" in browser.page_source, \"Post new job not found after login\"\nE       AssertionError: Post new job not found after login\nE       assert 'Post new qjob' in '<html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"icon\" href=\"/recruiter-logo.png\"><link rel=\"preconnect\" href=\"...56Z\" fill=\"#FFFFFF\"></path></svg></button></section></div></div></div><div class=\"Toastify\"></div></div></body></html>'\nE        +  where '<html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"icon\" href=\"/recruiter-logo.png\"><link rel=\"preconnect\" href=\"...56Z\" fill=\"#FFFFFF\"></path></svg></button></section></div></div></div><div class=\"Toastify\"></div></div></body></html>' = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"043d71b2797a731b21ecdba5a11c9626\")>.page_source\n\ntest_login.py:123: AssertionError",
+                    "stdout": "Successfully logged in\n"
+                },
+                "teardown": {
+                    "name": "teardown",
+                    "duration": 2.0978741999715567,
+                    "outcome": "passed"
+                },
+                "outcome": "failed"
+            }
+        ],
+        "summary": {
+            "passed": 2,
+            "failed": 1,
+            "num_tests": 3,
+            "duration": 24.65848970413208
+        },
+        "created_at": "2023-12-22 13:40:58.424326"
+    }
+}
